@@ -1,0 +1,44 @@
+{
+	"identifier": "dougs_routes",
+	"about": {
+		"title": "Dougs route table",
+		"explanation": "Exploration of how to do route tables"
+	},
+	"binding_target": {
+		"configuration": {
+			"admin_password": "^^random(8)^^"
+		}
+	},
+	"bindings": [
+		{
+			"target": {
+				"repository": "https://github.com/v2Blueprints/aws-route-table"
+			},
+			"configuration": {
+				"Name": "Route_table"
+			}
+		},
+		{
+			"target": {
+				"type": "embed",
+				"repository": "https://github.com/v2Blueprints/aws-route"
+			},
+			"configuration": {
+				"vpc_id": "bindings[https://github.com/v2Blueprints/aws_vpc[0]].id",
+				"cidr_block": "10.0.2.0/24",
+				"gateway_id": "aws_internet_gateway.example.id"
+			}
+		},
+		{
+			"target": {
+				"type": "embed",
+				"repository": "https://github.com/v2Blueprints/aws-route"
+			},
+			"configuration": {
+				"vpc_id": "bindings[https://github.com/v2Blueprints/aws_vpc[0]].id",
+				"cidr_block": "10.0.1.0/24",
+				"gateway_id": "aws_internet_gateway.example.id"
+			}
+		}
+	]
+}
