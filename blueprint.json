@@ -6,7 +6,7 @@
 	},
 	"binding_target": {
 		"configuration": {
-			"admin_password": "^^random(8)^^"
+			"name": "binding_identifier"
 		}
 	},
 	"bindings": [
