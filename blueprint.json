@@ -25,7 +25,7 @@
 			},
 			"configuration": {
 				"vpc_id": "bindings[https://github.com/v2Blueprints/aws_vpc[0]].id",
-				"cidr_block": "10.0.2.0/24",
+				"cidr_block": "10.111.111.0/24",
 				"gateway_id": "aws_internet_gateway.example.id"
 			}
 		},
@@ -36,7 +36,18 @@
 			},
 			"configuration": {
 				"vpc_id": "bindings[https://github.com/v2Blueprints/aws_vpc[0]].id",
-				"cidr_block": "10.0.1.0/24",
+				"cidr_block": "10.111.222.0/24",
+				"gateway_id": "aws_internet_gateway.example.id"
+			}
+		},
+		{
+			"target": {
+				"type": "embed",
+				"repository": "https://github.com/v2Blueprints/aws-route"
+			},
+			"configuration": {
+				"vpc_id": "bindings[https://github.com/v2Blueprints/aws_vpc[0]].id",
+				"cidr_block": "0.0.0.0/0",
 				"gateway_id": "aws_internet_gateway.example.id"
 			}
 		}
