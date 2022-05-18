@@ -1,5 +1,5 @@
 {
-	"identifier": "dougs_routes",
+	"identifier": "dougs-route-table",
 	"about": {
 		"title": "Dougs route table",
 		"explanation": "Exploration of how to do route tables"
